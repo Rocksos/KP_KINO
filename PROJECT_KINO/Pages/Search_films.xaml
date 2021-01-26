@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Label Content="Поиск фильмов" HorizontalAlignment="Left" Margin="236,10,0,0" VerticalAlignment="Top" Width="294" Height="60" FontWeight="Bold" FontSize="36" Grid.Column="1"/>
         <ComboBox x:Name="search_box" HorizontalAlignment="Left" Margin="536,90,0,0" VerticalAlignment="Top" Width="336" Height="34" IsEditable="True" Grid.Column="1"/>
-        <Button Content="Найти" HorizontalAlignment="Left" Margin="892,90,0,0" VerticalAlignment="Top" Width="91" Height="34" Click="Button_Click" FontSize="16" Grid.Column="1"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Margin="892,90,0,0" VerticalAlignment="Top" Width="114" Height="34" Click="Button_Click" FontSize="18" Grid.Column="1"/>
         <ComboBox x:Name="Year_box" HorizontalAlignment="Left" Margin="112,90,0,0" VerticalAlignment="Top" Width="138" Height="34" FontSize="16" SelectionChanged="Year_box_SelectionChanged"/>
         <ComboBox x:Name="Genre_box" HorizontalAlignment="Left" Margin="114,90,0,0" VerticalAlignment="Top" Width="260" Height="34" RenderTransformOrigin="0.483,1.235" FontSize="16" SelectionChanged="Genre_box_SelectionChanged" Grid.Column="1"/>
         <Label Content="По жанру:" HorizontalAlignment="Left" Margin="7,90,0,0" VerticalAlignment="Top" Height="34" Width="102" FontSize="18" FontWeight="Bold" Grid.Column="1"/>
@@ -23,7 +23,7 @@
         <DataGrid Name="Films_grid" HorizontalAlignment="Left" Height="568" Margin="10,142,0,0" VerticalAlignment="Top" Width="1260" FontSize="24" Foreground="Black" AutoGenerateColumns="False" FontWeight="Bold" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название фильма" Width="600" Binding="{Binding Film_name}"/>
-                <DataGridTextColumn Header="Год выхода" Width="160" Binding="{Binding Premiere_year}"/>
+                <DataGridTextColumn Header="Год выхода" Width="180" Binding="{Binding Premiere_year}"/>
                 <DataGridTextColumn Header="Длительность" Width="200" Binding="{Binding Duration}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
@@ -34,5 +34,6 @@
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="428,90,0,0" VerticalAlignment="Top" Height="34" Width="102" FontSize="18" FontWeight="Bold" Grid.Column="1"/>
     </Grid>
 </Page>

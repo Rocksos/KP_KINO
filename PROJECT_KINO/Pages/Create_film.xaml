@@ -9,14 +9,14 @@
       Title="Create_film">
 
     <Grid Background="#FF45D6C3">
-        <Label Content="Добавление фильма" HorizontalAlignment="Left" Margin="450,46,0,0" VerticalAlignment="Top" Width="380" Height="60" FontWeight="Bold" FontSize="36"/>
-        <TextBox x:Name="film_name" HorizontalAlignment="Left" Height="38" Margin="576,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
-        <TextBox x:Name="duration_box" HorizontalAlignment="Left" Height="38" Margin="576,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
-        <TextBox x:Name="year_box" HorizontalAlignment="Left" Height="38" Margin="576,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
-        <Label Content="Название фильма" HorizontalAlignment="Left" Margin="386,158,0,0" VerticalAlignment="Top" Width="174" Height="38" FontSize="20"/>
-        <Label Content="Год выхода" HorizontalAlignment="Left" Margin="438,214,0,0" VerticalAlignment="Top" Width="122" Height="38" FontSize="20"/>
-        <Label Content="Длительность" HorizontalAlignment="Left" Margin="423,274,0,0" VerticalAlignment="Top" Width="137" Height="38" FontSize="20"/>
-        <Button x:Name="Create_btn" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Margin="498,371,0,0" Height="36" FontSize="18" Click="Button_Click"/>
+        <Label Content="Добавление фильма" HorizontalAlignment="Left" Margin="448,66,0,0" VerticalAlignment="Top" Width="380" Height="60" FontWeight="Bold" FontSize="36"/>
+        <TextBox x:Name="film_name" HorizontalAlignment="Left" Height="38" Margin="574,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
+        <TextBox x:Name="duration_box" HorizontalAlignment="Left" Height="38" Margin="574,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
+        <TextBox x:Name="year_box" HorizontalAlignment="Left" Height="38" Margin="574,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
+        <Label Content="Название фильма" HorizontalAlignment="Left" Margin="384,178,0,0" VerticalAlignment="Top" Width="174" Height="38" FontSize="20"/>
+        <Label Content="Год выхода" HorizontalAlignment="Left" Margin="436,234,0,0" VerticalAlignment="Top" Width="122" Height="38" FontSize="20"/>
+        <Label Content="Длительность (в минутах)" HorizontalAlignment="Left" Margin="312,294,0,0" VerticalAlignment="Top" Width="246" Height="38" FontSize="20"/>
+        <Button x:Name="Create_btn" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Margin="496,390,0,0" Height="36" FontSize="18" Click="Button_Click"/>
 
     </Grid>
 </Page>

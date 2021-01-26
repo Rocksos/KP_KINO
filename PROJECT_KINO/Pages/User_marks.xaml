@@ -11,7 +11,7 @@
     <Grid Background="#FF700897">
         <Label Content="Оценки пользователей фильма" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Width="513"/>
         <Label x:Name="Film_lbl" Content="" HorizontalAlignment="Left" Margin="523,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Width="747"/>
-        <DataGrid x:Name="Marks_grid" HorizontalAlignment="Left" Height="647" Margin="10,63,0,0" VerticalAlignment="Top" Width="1260" FontSize="32" FontWeight="Bold" AutoGenerateColumns="False">
+        <DataGrid x:Name="Marks_grid" HorizontalAlignment="Left" Height="647" Margin="10,63,0,0" VerticalAlignment="Top" Width="1260" FontSize="28" FontWeight="Bold" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Пользователь" Binding="{Binding Login}" Width="500"/>
                 <DataGridTextColumn Header="Оценка" Binding="{Binding Mark}" Width="200"/>

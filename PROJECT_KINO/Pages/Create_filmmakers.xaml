@@ -8,7 +8,7 @@
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="Create_filmmakers">
 
-    <Grid Background="#FFC13B4D">
+    <Grid Background="#FFB87136">
 
         <Label Content="Добавление кинодеятеля" HorizontalAlignment="Left" Margin="407.5,46,0,0" VerticalAlignment="Top" Width="465" Height="60" FontWeight="Bold" FontSize="36"/>
         <Label Content="Полное имя" HorizontalAlignment="Left" Margin="438,158,0,0" VerticalAlignment="Top" Width="122" Height="38" FontSize="20"/>

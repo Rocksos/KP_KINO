@@ -27,7 +27,7 @@
         <ComboBox x:Name="Rsex_box" HorizontalAlignment="Left" Margin="626,478,0,0" VerticalAlignment="Top" Width="240" Height="32" FontSize="20">
         </ComboBox>
         <ComboBox x:Name="country_box" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Margin="626,515,0,0" Height="32" IsEditable="True"/>
-        <Button x:Name="Reg_btn" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="958,598,0,0" VerticalAlignment="Top" Width="248" Height="56" FontSize="16" FontWeight="Bold" Click="Reg_btn_Click"/>
+        <Button x:Name="Reg_btn" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="958,598,0,0" VerticalAlignment="Top" Width="248" Height="56" FontSize="18" FontWeight="Bold" Click="Reg_btn_Click"/>
 
     </Grid>
 </Page>

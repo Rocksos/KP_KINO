@@ -12,10 +12,10 @@
         <Label Content="Редактор" HorizontalAlignment="Left" Margin="552.5,46,0,0" VerticalAlignment="Top" Width="175" Height="60" FontWeight="Bold" FontSize="36"/>
         <Label Content="Никнейм                " HorizontalAlignment="Left" Margin="71,128,0,0" VerticalAlignment="Top" Width="161" Height="60" FontSize="36"/>
         <Button Content="Перейти в профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Margin="71,188,0,0" Height="29" FontSize="16" Click="Button_Click"/>
-        <Button Name="Cr_film_btn" Content="Добавление фильмов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,176,0,0" Height="60" FontSize="20" Click="Cr_film_btn_Click"/>
-        <Button Name="Cr_maker_btn" Content="Добавление кинодеятелей" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,262,0,0" Height="60" FontSize="20" Click="Cr_maker_btn_Click"/>
-        <Button Name="Cr_studio_btn" Content="Добавление студий" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,349,0,0" Height="60" FontSize="20" Click="Cr_studio_btn_Click"/>
-        <Button Name="Search_btn" Content="Поиск фильмов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,434,0,0" Height="60" FontSize="20" Click="Search_btn_Click"/>
+        <Button Name="Cr_film_btn" Content="Добавление фильмов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,256,0,0" Height="60" FontSize="20" Click="Cr_film_btn_Click"/>
+        <Button Name="Cr_maker_btn" Content="Добавление кинодеятелей" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,342,0,0" Height="60" FontSize="20" Click="Cr_maker_btn_Click"/>
+        <Button Name="Cr_studio_btn" Content="Добавление студий" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,430,0,0" Height="60" FontSize="20" Click="Cr_studio_btn_Click"/>
+        <Button Name="Search_btn" Content="Поиск фильмов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,172,0,0" Height="60" FontSize="20" Click="Search_btn_Click"/>
 
     </Grid>
 </Page>

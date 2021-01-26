@@ -9,12 +9,12 @@
       Title="Connection">
 
     <Grid Background="#FF5096DC">
-        <TextBox x:Name="login_box" HorizontalAlignment="Left" Height="40" Margin="550,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Calibri"/>
-        <TextBox x:Name="password_box" HorizontalAlignment="Left" Height="40" Margin="550,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Calibri"/>
-        <Button x:Name="btn_Enter" Content="Вход" HorizontalAlignment="Left" Margin="576,389,0,0" VerticalAlignment="Top" Width="130" Height="30" FontSize="14" Click="btn_Enter_Click"/>
-        <Button x:Name="btn_Registry" Content="Регистрация" HorizontalAlignment="Left" Margin="576,424,0,0" VerticalAlignment="Top" Width="130" Height="30" FontSize="14" Click="btn_Registry_Click"/>
-        <Label Content="Логин" HorizontalAlignment="Left" Margin="466,257,0,0" VerticalAlignment="Top" Width="70" Height="38" FontWeight="Bold" FontSize="20"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="452,322,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="login_box" HorizontalAlignment="Left" Height="40" Margin="588,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Calibri"/>
+        <TextBox x:Name="password_box" HorizontalAlignment="Left" Height="40" Margin="588,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Calibri"/>
+        <Button x:Name="btn_Enter" Content="Вход" HorizontalAlignment="Left" Margin="565,358,0,0" VerticalAlignment="Top" Width="150" Height="34" FontSize="18" Click="btn_Enter_Click"/>
+        <Button x:Name="btn_Registry" Content="Регистрация" HorizontalAlignment="Left" Margin="565,398,0,0" VerticalAlignment="Top" Width="150" Height="34" FontSize="18" Click="btn_Registry_Click"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="504,204,0,0" VerticalAlignment="Top" Width="70" Height="38" FontSize="20"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="490,270,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="Авторизация" HorizontalAlignment="Left" Margin="520,56,0,0" VerticalAlignment="Top" Width="240" Height="60" FontWeight="Bold" FontSize="36"/>
 
     </Grid>
