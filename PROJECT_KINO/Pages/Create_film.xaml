@@ -1,0 +1,22 @@
+﻿<Page x:Class="PROJECT_KINO.Pages.Create_film"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PROJECT_KINO.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Create_film">
+
+    <Grid Background="#FF45D6C3">
+        <Label Content="Добавление фильма" HorizontalAlignment="Left" Margin="450,46,0,0" VerticalAlignment="Top" Width="380" Height="60" FontWeight="Bold" FontSize="36"/>
+        <TextBox x:Name="film_name" HorizontalAlignment="Left" Height="38" Margin="576,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
+        <TextBox x:Name="duration_box" HorizontalAlignment="Left" Height="38" Margin="576,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
+        <TextBox x:Name="year_box" HorizontalAlignment="Left" Height="38" Margin="576,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="20"/>
+        <Label Content="Название фильма" HorizontalAlignment="Left" Margin="386,158,0,0" VerticalAlignment="Top" Width="174" Height="38" FontSize="20"/>
+        <Label Content="Год выхода" HorizontalAlignment="Left" Margin="438,214,0,0" VerticalAlignment="Top" Width="122" Height="38" FontSize="20"/>
+        <Label Content="Длительность" HorizontalAlignment="Left" Margin="423,274,0,0" VerticalAlignment="Top" Width="137" Height="38" FontSize="20"/>
+        <Button x:Name="Create_btn" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Margin="498,371,0,0" Height="36" FontSize="18" Click="Button_Click"/>
+
+    </Grid>
+</Page>
