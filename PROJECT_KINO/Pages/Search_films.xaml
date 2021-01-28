@@ -29,8 +29,8 @@
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem x:Name="gotofilm" Header="Перейти"/>
-                    <MenuItem x:Name="update" Header="Изменить"/>
-                    <MenuItem x:Name="delete" Header="Удалить"/>
+                    <MenuItem x:Name="update" Header="Изменить" Visibility="Visible"/>
+                    <MenuItem x:Name="delete" Header="Удалить" Visibility="Visible"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>

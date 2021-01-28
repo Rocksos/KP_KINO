@@ -92,89 +92,98 @@ namespace PROJECT_KINO.Pages
                 conn.Close();
             }
 
-            //удаление фильма
-            delete.Click += (s, e) =>
+            //скрытие функций изменения и удаления
+            if (Public_Class.Role_num < 3)
             {
-                if (Films_grid.SelectedItem != null)
+                //удаление фильма
+                delete.Click += (s, e) =>
                 {
-                    MessageBoxResult result = MessageBox.Show("Вы действительно хотите удалить фильм?", "Уведомление", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-                    if (result == MessageBoxResult.Yes)
+                    if (Films_grid.SelectedItem != null)
                     {
-                        using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
+                        MessageBoxResult result = MessageBox.Show("Вы действительно хотите удалить фильм?", "Уведомление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                        if (result == MessageBoxResult.Yes)
                         {
-                            try
+                            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
                             {
-                                connection.Open();
-
-                                using (SqlCommand command = connection.CreateCommand())
+                                try
                                 {
-                                    command.CommandText = "DELETE FROM Films WHERE Film_name = @fname AND Premiere_year = @year";
+                                    connection.Open();
 
-                                    command.Parameters.AddWithValue("@fname", ((DataRowView)Films_grid.SelectedItem)[0]);
-                                    command.Parameters.AddWithValue("@year", ((DataRowView)Films_grid.SelectedItem)[1]);
-
-                                    command.ExecuteNonQuery();
- 
-                                }
-
-                                using (SqlCommand command = connection.CreateCommand())
-                                {
-                                    command.CommandText = "DELETE FROM Film_info WHERE Film_id = (SELECT Film_id FROM Films WHERE (Film_name = @fname) " +
-                                                          "AND (Premiere_year = @year)";
-
-                                    command.Parameters.AddWithValue("@fname", ((DataRowView)Films_grid.SelectedItem)[0]);
-                                    command.Parameters.AddWithValue("@year", ((DataRowView)Films_grid.SelectedItem)[1]);
-
-                                    command.ExecuteNonQuery();
-                                }
-                            }
-                            catch (SqlException ex)
-                            {
-                                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-
-                                return;
-                            }
-                            finally
-                            {
-                                using (SqlCommand sqlCommand = connection.CreateCommand())
-                                {
-                                    sqlCommand.CommandText = string.Format("SELECT Film_name, Premiere_year, Duration FROM [Films]");
-
-                                    using (SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand))
+                                    using (SqlCommand command = connection.CreateCommand())
                                     {
-                                        DataTable films = new DataTable();
-                                        adpt.Fill(films);
-                                        Films_grid.ItemsSource = films.DefaultView;
+                                        command.CommandText = "DELETE FROM Films WHERE Film_name = @fname AND Premiere_year = @year";
+
+                                        command.Parameters.AddWithValue("@fname", ((DataRowView)Films_grid.SelectedItem)[0]);
+                                        command.Parameters.AddWithValue("@year", ((DataRowView)Films_grid.SelectedItem)[1]);
+
+                                        command.ExecuteNonQuery();
+
                                     }
 
+                                    using (SqlCommand command = connection.CreateCommand())
+                                    {
+                                        command.CommandText = "DELETE FROM Film_info WHERE Film_id = (SELECT Film_id FROM Films WHERE (Film_name = @fname) " +
+                                                              "AND (Premiere_year = @year)";
+
+                                        command.Parameters.AddWithValue("@fname", ((DataRowView)Films_grid.SelectedItem)[0]);
+                                        command.Parameters.AddWithValue("@year", ((DataRowView)Films_grid.SelectedItem)[1]);
+
+                                        command.ExecuteNonQuery();
+                                    }
                                 }
-                                connection.Close();
+                                catch (SqlException ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                                    return;
+                                }
+                                finally
+                                {
+                                    using (SqlCommand sqlCommand = connection.CreateCommand())
+                                    {
+                                        sqlCommand.CommandText = string.Format("SELECT Film_name, Premiere_year, Duration FROM [Films]");
+
+                                        using (SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand))
+                                        {
+                                            DataTable films = new DataTable();
+                                            adpt.Fill(films);
+                                            Films_grid.ItemsSource = films.DefaultView;
+                                        }
+
+                                    }
+                                    connection.Close();
+                                }
                             }
                         }
                     }
-                }
-                else
+                    else
+                    {
+                        MessageBox.Show("Запись не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                        return;
+                    }
+                };
+
+                //Изменение фильма
+                update.Click += (s, e) =>
                 {
-                    MessageBox.Show("Запись не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    if (Films_grid.SelectedItem != null)
+                    {
+                        Public_Class.Film_name = ((DataRowView)Films_grid.SelectedItem)[0].ToString();
+                        Public_Class.Film_year = ((DataRowView)Films_grid.SelectedItem)[1].ToString();
+                        Public_Class.Film_time = ((DataRowView)Films_grid.SelectedItem)[2].ToString();
 
-                    return;
-                }
-            };
-
-            //Изменение фильма
-            update.Click += (s, e) =>
+                        Windows.Update_film update_film = new Windows.Update_film();
+                        update_film.ShowDialog();
+                    }
+                };
+            }
+            else
             {
-                if (Films_grid.SelectedItem != null)
-                {
-                    Public_Class.Film_name = ((DataRowView)Films_grid.SelectedItem)[0].ToString();
-                    Public_Class.Film_year = ((DataRowView)Films_grid.SelectedItem)[1].ToString();
-                    Public_Class.Film_time = ((DataRowView)Films_grid.SelectedItem)[2].ToString();
-
-                    Windows.Update_film update_film = new Windows.Update_film();
-                    update_film.ShowDialog();
-                }
-            };
+                delete.Visibility = Visibility.Hidden;
+                update.Visibility = Visibility.Hidden;
+            }
 
             //переход на стринцу фильма
             gotofilm.Click += (s, e) =>
@@ -184,7 +193,6 @@ namespace PROJECT_KINO.Pages
                     Public_Class.Film_name = ((DataRowView)Films_grid.SelectedItem)[0].ToString();
                     Public_Class.Film_year = ((DataRowView)Films_grid.SelectedItem)[1].ToString();
                     Public_Class.Film_time = ((DataRowView)Films_grid.SelectedItem)[2].ToString();
-
 
                     NavigationService?.Navigate(new Film_page());
                 }

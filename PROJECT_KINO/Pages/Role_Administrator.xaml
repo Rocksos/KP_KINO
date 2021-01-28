@@ -11,8 +11,8 @@
     <Grid Background="#FFA200AA">
         <Label Content="Администратор" HorizontalAlignment="Left" Margin="495,46,0,0" VerticalAlignment="Top" Width="290" Height="60" FontWeight="Bold" FontSize="36"/>
         <Label x:Name="Nik_lbl" Content="Никнейм
-               " HorizontalAlignment="Left" Margin="71,128,0,0" VerticalAlignment="Top" Width="161" Height="60" FontSize="36"/>
-        <Button x:Name="Profile_btn" Content="Перейти в профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Margin="71,188,0,0" Height="29" FontSize="16" Click="Profile_btn_Click"/>
+               " HorizontalAlignment="Left" Margin="32,128,0,0" VerticalAlignment="Top" Width="323" Height="60" FontSize="36"/>
+        <Button x:Name="Profile_btn" Content="Перейти в профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Margin="32,188,0,0" Height="29" FontSize="16" Click="Profile_btn_Click"/>
         <Button x:Name="Edit_btn" Content="Редактирование профилей" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,524,0,0" Height="60" FontSize="20" Click="Edit_btn_Click"/>
         <Button x:Name="Cr_film_btn" Content="Добавление фильмов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,260,0,0" Height="60" FontSize="20" Click="Cr_film_btn_Click"/>
         <Button x:Name="Cr_maker_btn" Content="Добавление кинодеятелей" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,346,0,0" Height="60" FontSize="20" Click="Cr_maker_btn_Click"/>

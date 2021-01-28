@@ -26,6 +26,7 @@ namespace PROJECT_KINO.Pages
         {
             InitializeComponent();
 
+            //заполнение боксов стран и профессий
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
@@ -63,7 +64,6 @@ namespace PROJECT_KINO.Pages
             else if (pro_box.SelectedIndex == -1) MessageBox.Show("Выберите профессию");
             else
             {
-
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
                 {
                     try
@@ -110,9 +110,7 @@ namespace PROJECT_KINO.Pages
                     { conn.Close(); }
                     
                 }
-                
             }
         }
-
     }
 }

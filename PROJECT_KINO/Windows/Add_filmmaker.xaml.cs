@@ -28,6 +28,7 @@ namespace PROJECT_KINO.Windows
         {
             InitializeComponent();
 
+            #region Изменение окна под профессию
             if (prof == "actor")
             {
                 Prof_label.Content = "Имя актера/актрисы";
@@ -189,8 +190,10 @@ namespace PROJECT_KINO.Windows
                     conn.Close();
                 }
             }
+            #endregion
         }
 
+        //добавление кинодеятеля
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (maker_box.SelectedIndex == -1) MessageBox.Show("Выберите кинодеятеля");
@@ -220,16 +223,13 @@ namespace PROJECT_KINO.Windows
                                     this.Close();
                             }
 
-                            else
-                                MessageBox.Show("Кинодеятель НЕ добавлен");
+                            else MessageBox.Show("Кинодеятель НЕ добавлен");
                         }
-
                     }
                     catch (SqlException ex)
                     { MessageBox.Show(ex.Message); }
                     finally
                     { conn.Close(); }
-
                 }
             }
         }

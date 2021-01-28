@@ -30,6 +30,8 @@ namespace PROJECT_KINO.Pages
             #region Заполнение страницы
             User_nickname.Content = Public_Class.User_name;
 
+            if (User_nickname.Content.ToString() != Public_Class.Profile) Update_user.Visibility = Visibility.Hidden;
+
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
@@ -80,6 +82,49 @@ namespace PROJECT_KINO.Pages
                 conn.Close();
             }
             #endregion
+            
+            //переход к фильму
+            gotofilm.Click += (s, e) =>
+            {
+                if (UserMarks_grid.SelectedItem != null)
+                {
+                    Public_Class.Film_name = ((DataRowView)UserMarks_grid.SelectedItem)[0].ToString();
+                    Public_Class.Film_year = ((DataRowView)UserMarks_grid.SelectedItem)[1].ToString();
+
+                    //запрос на длительность фильма
+                    using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
+                    {
+                        conn.Open();
+
+                        using (SqlCommand sqlCommand = conn.CreateCommand())
+                        {
+                            sqlCommand.CommandText = string.Format("SELECT Duration FROM [Films] WHERE Film_name = @name ");
+
+                            sqlCommand.Parameters.AddWithValue("@name", ((DataRowView)UserMarks_grid.SelectedItem)[0].ToString());
+
+                            using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                            {
+                                if (sqlDataReader.HasRows)
+                                {
+                                    while (sqlDataReader.Read())
+                                    {
+                                        Public_Class.Film_time = sqlDataReader[0].ToString(); 
+                                    }
+                                }
+                            }
+                        }
+
+                        conn.Close();
+                    }
+
+                    NavigationService?.Navigate(new Film_page());
+                }
+            };
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Update_User());
         }
     }
 }

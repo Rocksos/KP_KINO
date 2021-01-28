@@ -32,6 +32,7 @@ namespace PROJECT_KINO.Windows
             {
                 conn.Open();
 
+                //заполнение бокса стран
                 using (SqlCommand sqlCommand = conn.CreateCommand())
                 {
                     sqlCommand.CommandText = string.Format("SELECT Country_name FROM[Countries]");
@@ -49,6 +50,7 @@ namespace PROJECT_KINO.Windows
             }
         }
 
+        //добавление страны
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (country_box.SelectedIndex == -1) MessageBox.Show("Выберите страну");
@@ -78,8 +80,7 @@ namespace PROJECT_KINO.Windows
                                     this.Close();
                             }
 
-                            else
-                                MessageBox.Show("Страна НЕ добавлена");
+                            else MessageBox.Show("Страна НЕ добавлена");
                         }
 
                     }

@@ -8,99 +8,99 @@
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="Film_page">
 
-    <Grid Background="#FF700897">
+    <Grid Background="#FF9A27C5">
         <Label x:Name="Film_lbl" Content="Название" HorizontalAlignment="Left" Margin="64,26,0,0" VerticalAlignment="Top" Width="1158" Height="55" FontWeight="Bold" FontSize="28"/>
         <Label Content="Год выхода:" HorizontalAlignment="Left" Margin="64,81,0,0" VerticalAlignment="Top" Width="132" Height="40" FontWeight="Bold" FontSize="20"/>
         <Label x:Name="Year_lbl" Content="2000" HorizontalAlignment="Left" Margin="201,81,0,0" VerticalAlignment="Top" Width="58" Height="40" FontWeight="Bold" FontSize="20"/>
         <Label Content="Длительность фильма:" HorizontalAlignment="Left" Margin="870,81,0,0" VerticalAlignment="Top" Width="235" Height="40" FontWeight="Bold" FontSize="20"/>
         <Label x:Name="Time_lbl" Content="250 мин" HorizontalAlignment="Left" Margin="1110,81,0,0" VerticalAlignment="Top" Width="91" Height="40" FontWeight="Bold" FontSize="20"/>
         <Label Content="Съёмочная группа:" HorizontalAlignment="Left" Margin="64,252,0,0" VerticalAlignment="Top" Width="195" Height="40" FontWeight="Bold" FontSize="20"/>
-        <DataGrid x:Name="Studio_grid" HorizontalAlignment="Left" Height="69" Margin="870,126,0,0" VerticalAlignment="Top" Width="331" FontSize="14" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Studio_grid" HorizontalAlignment="Left" Height="69" Margin="870,126,0,0" VerticalAlignment="Top" Width="331" FontSize="14" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Студия" Binding="{Binding Studio_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_studio" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Country_grid" HorizontalAlignment="Left" Height="69" Margin="409,126,0,0" VerticalAlignment="Top" Width="425" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False" FontSize="14">
+        <DataGrid x:Name="Country_grid" HorizontalAlignment="Left" Height="69" Margin="409,126,0,0" VerticalAlignment="Top" Width="425" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False" FontSize="14">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Страны" Binding="{Binding Country_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_country" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Actors_grid" HorizontalAlignment="Left" Height="345" Margin="921,216,0,0" VerticalAlignment="Top" Width="280" FontSize="18" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Actors_grid" HorizontalAlignment="Left" Height="345" Margin="921,216,0,0" VerticalAlignment="Top" Width="280" FontSize="18" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Актеры" Binding="{Binding Maker_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_maker5" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Dir_grid" HorizontalAlignment="Left" Height="74" Margin="64,297,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Dir_grid" HorizontalAlignment="Left" Height="74" Margin="64,297,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Режиссер" Binding="{Binding Maker_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_maker" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Scrin_grid" HorizontalAlignment="Left" Height="74" Margin="64,371,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Scrin_grid" HorizontalAlignment="Left" Height="74" Margin="64,371,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Сценарист" Binding="{Binding Maker_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_maker1" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Prod_grid" HorizontalAlignment="Left" Height="74" Margin="64,445,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Prod_grid" HorizontalAlignment="Left" Height="74" Margin="64,445,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Продюссер" Binding="{Binding Maker_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_maker2" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Comp_grid" HorizontalAlignment="Left" Height="74" Margin="64,519,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Comp_grid" HorizontalAlignment="Left" Height="74" Margin="64,519,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Композитор" Binding="{Binding Maker_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_maker3" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Oper_grid" HorizontalAlignment="Left" Height="74" Margin="64,594,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Oper_grid" HorizontalAlignment="Left" Height="74" Margin="64,594,0,0" VerticalAlignment="Top" Width="265" FontSize="16" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Оператор" Binding="{Binding Maker_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_maker4" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
-        <DataGrid x:Name="Genres_grid" HorizontalAlignment="Left" Height="112" Margin="64,126,0,0" VerticalAlignment="Top" Width="264" FontSize="14" FontWeight="Bold" Background="#FF700897" AutoGenerateColumns="False">
+        <DataGrid x:Name="Genres_grid" HorizontalAlignment="Left" Height="112" Margin="64,126,0,0" VerticalAlignment="Top" Width="264" FontSize="14" FontWeight="Bold" Background="#FF9A27C5" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Жанры" Binding="{Binding Genre_name}"/>
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
-                <ContextMenu>
+                <ContextMenu Visibility="Visible">
                     <MenuItem x:Name="delete_genre" Header="Удалить"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
@@ -116,7 +116,7 @@
         <Button x:Name="Add_actors_btn" Content="+" HorizontalAlignment="Left" Margin="1206,216,0,0" VerticalAlignment="Top" Width="49" Height="43" FontSize="26" FontWeight="Bold" Click="Add_actors_btn_Click"/>
         <Button x:Name="Add_maker_btn" Content="Создать кинодеятеля" HorizontalAlignment="Left" Margin="64,673,0,0" VerticalAlignment="Top" Width="265" Height="28" FontWeight="Bold" Click="Add_maker_btn_Click"/>
         <Label Content="Средняя оценка:" HorizontalAlignment="Left" Margin="409,396,0,0" VerticalAlignment="Top" Width="179" Height="40" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="mark_lbl" Content="" HorizontalAlignment="Left" Margin="409,423,0,0" VerticalAlignment="Top" Height="138" Width="425" FontWeight="Bold" FontSize="100" Foreground="Black"/>
+        <Label x:Name="mark_lbl" Content="7" HorizontalAlignment="Left" Margin="409,423,0,0" VerticalAlignment="Top" Height="138" Width="425" FontWeight="Bold" FontSize="110" Foreground="Green"/>
         <Button x:Name="add_mark_btn" Content="Поставить оценку" HorizontalAlignment="Left" Margin="409,566,0,0" VerticalAlignment="Top" Width="119" Height="27" Click="add_mark_btn_Click" FontWeight="Bold"/>
         <Button x:Name="users_marks_btn" Content="Оценки пользователей" HorizontalAlignment="Left" Margin="550,566,0,0" VerticalAlignment="Top" Width="151" Height="27" Click="users_marks_btn_Click" FontWeight="Bold"/>
         <Label Content="Моя оценка:" HorizontalAlignment="Left" Margin="409,602,0,0" VerticalAlignment="Top" Width="197" Height="47" FontWeight="Bold" FontSize="30"/>

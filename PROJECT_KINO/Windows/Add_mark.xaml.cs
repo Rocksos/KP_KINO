@@ -30,9 +30,9 @@ namespace PROJECT_KINO.Windows
 
             if (mark == "add") Update_mark.Visibility = Visibility.Hidden;
             if (mark == "update") Add_mark1.Visibility = Visibility.Hidden;
-
         }
 
+        #region Смена цветов оценок при нажатии
         private void mark_1_Click(object sender, RoutedEventArgs e)
         {
             Public_Class.Mark = 1;
@@ -203,8 +203,9 @@ namespace PROJECT_KINO.Windows
             mark_9.Background = System.Windows.Media.Brushes.White;
             mark_7.Background = System.Windows.Media.Brushes.White;
         }
+        #endregion
 
-        #region Добавление оценки
+        //добавление оценки
         private void Add_mark1_Click(object sender, RoutedEventArgs e)
         {
             if (Public_Class.Mark > 0 && Public_Class.Mark < 11)
@@ -239,14 +240,12 @@ namespace PROJECT_KINO.Windows
                     { MessageBox.Show("Оценка уже стоит"); }
                     finally
                     { conn.Close(); }
-
                 }
             }
             else MessageBox.Show("Выберите оценку");
         }
-        #endregion
 
-        #region Изменение оценки
+        //изменение оценки
         private void Update_mark_Click(object sender, RoutedEventArgs e)
         {
             if (Public_Class.Mark > 0 && Public_Class.Mark < 11)
@@ -275,17 +274,14 @@ namespace PROJECT_KINO.Windows
                             else
                                 MessageBox.Show("Оценка НЕ изменена");
                         }
-
                     }
                     catch (SqlException ex)
                     { MessageBox.Show(ex.Message); }
                     finally
                     { conn.Close(); }
-
                 }
             }
             else MessageBox.Show("Выберите оценку");
         }
-        #endregion
     }
 }

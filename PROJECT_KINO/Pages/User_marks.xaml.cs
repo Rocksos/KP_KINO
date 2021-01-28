@@ -28,6 +28,7 @@ namespace PROJECT_KINO.Pages
         {
             InitializeComponent();
 
+            //вставка названия фильма
             Film_lbl.Content = "«" + Public_Class.Film_name + "»";
 
             //заполнение грида
@@ -50,6 +51,7 @@ namespace PROJECT_KINO.Pages
                 conn.Close();
             }
 
+            //переход к пользователю
             gotouser.Click += (s, e) =>
             {
                 if (Marks_grid.SelectedItem != null)

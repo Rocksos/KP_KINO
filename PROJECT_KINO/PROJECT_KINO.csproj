@@ -86,6 +86,9 @@
     <Compile Include="Pages\Search_films.xaml.cs">
       <DependentUpon>Search_films.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Update_User.xaml.cs">
+      <DependentUpon>Update_User.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\User_marks.xaml.cs">
       <DependentUpon>User_marks.xaml</DependentUpon>
     </Compile>
@@ -164,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Search_films.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Update_User.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

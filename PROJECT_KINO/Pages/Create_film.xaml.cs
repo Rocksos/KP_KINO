@@ -33,38 +33,39 @@ namespace PROJECT_KINO.Pages
             else if (year_box.Text == "") MessageBox.Show("Введите год выхода");
             else if (duration_box.Text == "") MessageBox.Show("Введите длину фильма");
             else
-            { }
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
-                try
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
                 {
-                    conn.Open();
-
-                    using (SqlCommand sqlCommand = conn.CreateCommand())
+                    try
                     {
-                        sqlCommand.CommandText = string.Format("INSERT INTO [Films] (Film_name, Premiere_year, Duration) " +
-                                                                "VALUES (@Fname, @Year, @Duration)");
+                        conn.Open();
 
-                        sqlCommand.Parameters.AddWithValue("@Fname", film_name.Text);
-                        sqlCommand.Parameters.AddWithValue("@Year", year_box.Text);
-                        sqlCommand.Parameters.AddWithValue("@Duration", duration_box.Text);
-
-                        if (sqlCommand.ExecuteNonQuery() == 1)
+                        using (SqlCommand sqlCommand = conn.CreateCommand())
                         {
-                            MessageBox.Show("Фильм добавлен");
-                            film_name.Text = "";
-                            year_box.Text = "";
-                            duration_box.Text = "";
-                        }
-                        else
-                            MessageBox.Show("Фильм НЕ добавлен");
-                    }
-                }
-                catch (SqlException ex)
-                { MessageBox.Show(ex.Message); }
-                finally
-                { conn.Close(); }
+                            sqlCommand.CommandText = string.Format("INSERT INTO [Films] (Film_name, Premiere_year, Duration) " +
+                                                                    "VALUES (@Fname, @Year, @Duration)");
 
+                            sqlCommand.Parameters.AddWithValue("@Fname", film_name.Text);
+                            sqlCommand.Parameters.AddWithValue("@Year", year_box.Text);
+                            sqlCommand.Parameters.AddWithValue("@Duration", duration_box.Text);
+
+                            if (sqlCommand.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Фильм добавлен");
+                                film_name.Text = "";
+                                year_box.Text = "";
+                                duration_box.Text = "";
+                            }
+                            else
+                                MessageBox.Show("Фильм НЕ добавлен");
+                        }
+                    }
+                    catch (SqlException ex)
+                    { MessageBox.Show(ex.Message); }
+                    finally
+                    { conn.Close(); }
+
+                }
             }
         }
         

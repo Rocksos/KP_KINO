@@ -27,7 +27,6 @@ namespace PROJECT_KINO.Pages
         {
             InitializeComponent();
         }
-        
 
         private void btn_Enter_Click(object sender, RoutedEventArgs e)
         {
@@ -54,17 +53,12 @@ namespace PROJECT_KINO.Pages
                             if (!string.IsNullOrEmpty(login_box.Text) &&
                                 !string.IsNullOrEmpty(password_box.Text))
                             {
-
-
                                 using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                                 {
-
-
                                     if (sqlDataReader.HasRows)
                                     {
                                         while (sqlDataReader.Read())
                                         {
-
                                             switch (sqlDataReader[2])
                                             {
                                                 case 1:
@@ -111,6 +105,4 @@ namespace PROJECT_KINO.Pages
             NavigationService?.Navigate(new Registration());
         }
     }
-
-    
 }

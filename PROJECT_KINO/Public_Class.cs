@@ -8,7 +8,6 @@ namespace PROJECT_KINO
 {
     static class Public_Class
     {
-
         public static string Profile { get; set; } //Имя текущего пользователя
         public static string User_name { get; set; } //имя просматриваемого пользователя
 
@@ -21,7 +20,5 @@ namespace PROJECT_KINO
         public static int Role_num { get; set; } //номер роли для авторизации
 
         public static int Mark { get; set; } //выбранная оценка для выставления
-
-        public static int my_mark { get; set; }
     }
 }

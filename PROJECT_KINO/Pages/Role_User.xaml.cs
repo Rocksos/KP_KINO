@@ -23,6 +23,8 @@ namespace PROJECT_KINO.Pages
         public Role_User()
         {
             InitializeComponent();
+
+            Nik_lbl.Content = Public_Class.Profile;
         }
 
         private void Search_btn_Click(object sender, RoutedEventArgs e)

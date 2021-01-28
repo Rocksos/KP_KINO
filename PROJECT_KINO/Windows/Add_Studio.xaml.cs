@@ -28,13 +28,14 @@ namespace PROJECT_KINO.Windows
         {
             InitializeComponent();
 
+            //заполнение бокса студий
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
 
                 using (SqlCommand sqlCommand = conn.CreateCommand())
                 {
-                    sqlCommand.CommandText = string.Format("SELECT Studio_name FROM[Studios]");
+                    sqlCommand.CommandText = string.Format("SELECT Studio_name FROM [Studios]");
 
                     using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                     {
@@ -78,8 +79,7 @@ namespace PROJECT_KINO.Windows
                                     this.Close();
                             }
 
-                            else
-                                MessageBox.Show("Студия НЕ добавлена");
+                            else MessageBox.Show("Студия НЕ добавлена");
                         }
 
                     }
@@ -87,7 +87,6 @@ namespace PROJECT_KINO.Windows
                     { MessageBox.Show(ex.Message); }
                     finally
                     { conn.Close(); }
-
                 }
             }
         }

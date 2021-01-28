@@ -28,7 +28,7 @@ namespace PROJECT_KINO.Windows
         {
             InitializeComponent();
 
-
+            //заполнение бокса жанров
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
@@ -50,6 +50,7 @@ namespace PROJECT_KINO.Windows
             }
         }
 
+        //добавление жанра
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (genre_box.SelectedIndex == -1) MessageBox.Show("Выберите жанр");
@@ -78,11 +79,8 @@ namespace PROJECT_KINO.Windows
                                 else
                                     this.Close();
                             }
-
-                            else
-                                MessageBox.Show("Жанр НЕ добавлен");
+                            else MessageBox.Show("Жанр НЕ добавлен");
                         }
-
                     }
                     catch (SqlException ex)
                     { MessageBox.Show(ex.Message); }

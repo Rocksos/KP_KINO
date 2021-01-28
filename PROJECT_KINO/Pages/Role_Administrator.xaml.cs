@@ -25,7 +25,7 @@ namespace PROJECT_KINO.Pages
         {
             InitializeComponent();
 
-            Nik_lbl.Content = Public_Class.Profile;
+            Nik_lbl.Content = Public_Class.Profile; 
         }
 
         private void Edit_btn_Click(object sender, RoutedEventArgs e)
@@ -44,12 +44,10 @@ namespace PROJECT_KINO.Pages
         {
             NavigationService?.Navigate(new Create_Studio());
         }
-
         private void Search_btn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Search_films());
         }
-
         private void Profile_btn_Click(object sender, RoutedEventArgs e)
         {
             Public_Class.User_name = Public_Class.Profile;

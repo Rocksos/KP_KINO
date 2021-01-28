@@ -21,8 +21,15 @@
                 <DataGridTextColumn Header="Год выхода" Binding="{Binding Premiere_year}" Width="160"/>
                 <DataGridTextColumn Header="Оценка" Binding="{Binding Mark}" Width="100"/>
             </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="gotofilm" Header="Перейти к фильму"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            
         </DataGrid>
         <Label Content="Оценки пользователя:" HorizontalAlignment="Left" Margin="408,180,0,0" VerticalAlignment="Top" FontSize="20" Width="217"/>
+        <Button x:Name="Update_user" Content="Изменить данные" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="217" FontSize="20" Height="37" Click="Button_Click"/>
 
     </Grid>
 </Page>

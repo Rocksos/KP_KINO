@@ -26,6 +26,7 @@ namespace PROJECT_KINO.Pages
         {
             InitializeComponent();
 
+            //заполнение бокса стран
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
@@ -52,7 +53,6 @@ namespace PROJECT_KINO.Pages
             else if (country_box.SelectedIndex == -1) MessageBox.Show("Выберите страну");
             else
             {
-
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
                 {
                     try
@@ -75,8 +75,7 @@ namespace PROJECT_KINO.Pages
                                 Dr_name.Text = "";
                                 country_box.SelectedIndex = -1;
                             }
-                            else
-                                MessageBox.Show("Студия НЕ добавлена");
+                            else MessageBox.Show("Студия НЕ добавлена");
                         }
 
                     }

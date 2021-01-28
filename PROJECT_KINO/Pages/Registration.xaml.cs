@@ -29,6 +29,7 @@ namespace PROJECT_KINO.Pages
             Rsex_box.Items.Add("м");
             Rsex_box.Items.Add("ж");
 
+            //заполнение бокса стран
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
@@ -59,7 +60,6 @@ namespace PROJECT_KINO.Pages
             else if (country_box.SelectedIndex == -1) MessageBox.Show("Ввыберите страну");
             else
             {
-
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
                 {
                     try
@@ -78,21 +78,12 @@ namespace PROJECT_KINO.Pages
                             sqlCommand.Parameters.AddWithValue("@sex", Rsex_box.SelectedItem.ToString());
                             sqlCommand.Parameters.AddWithValue("@country", (country_box.SelectedIndex + 1));
 
-
                             if (sqlCommand.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Аккаунт создан");
-                                Rlogin_box.Text = "";
-                                Rpassword_box.Text = "";
-                                Rsurname_box.Text = "";
-                                Rname_box.Text = "";
-                                Rsex_box.SelectedIndex = -1;
-                                country_box.SelectedIndex = -1;
                                 NavigationService?.Navigate(new Connection());
                             }
-                            else
-                                MessageBox.Show("Аккаунт не создан");
-
+                            else MessageBox.Show("Аккаунт не создан");
                         }
                     }
                     catch (SqlException ex)
@@ -101,7 +92,6 @@ namespace PROJECT_KINO.Pages
                     { conn.Close(); }
                 }
             }
-
         }
     }
 }

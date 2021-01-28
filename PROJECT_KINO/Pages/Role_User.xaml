@@ -10,8 +10,8 @@
 
     <Grid Background="#FFB8B6B6">
         <Label Content="Пользователь" HorizontalAlignment="Left" Margin="510,46,0,0" VerticalAlignment="Top" Width="260" Height="60" FontWeight="Bold" FontSize="36"/>
-        <Label Content="Никнейм" HorizontalAlignment="Left" Margin="71,128,0,0" VerticalAlignment="Top" Width="161" Height="60" FontSize="36"/>
-        <Button Content="Перейти в профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Margin="71,188,0,0" Height="29" FontSize="16" Click="Button_Click"/>
+        <Label x:Name="Nik_lbl" Content="Никнейм" HorizontalAlignment="Left" Margin="35,128,0,0" VerticalAlignment="Top" Width="302" Height="60" FontSize="36"/>
+        <Button Content="Перейти в профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Margin="35,188,0,0" Height="29" FontSize="16" Click="Button_Click"/>
         <Button Name="Search_btn" Content="Поиск фильмов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="390,176,0,0" Height="60" FontSize="20" Click="Search_btn_Click"/>
     </Grid>
 </Page>
