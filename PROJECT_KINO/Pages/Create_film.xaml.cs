@@ -68,6 +68,5 @@ namespace PROJECT_KINO.Pages
                 }
             }
         }
-        
     }
 }

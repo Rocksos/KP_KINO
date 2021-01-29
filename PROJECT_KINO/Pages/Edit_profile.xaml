@@ -11,10 +11,10 @@
     <Grid>
         <Label Content="Редактирование роли" HorizontalAlignment="Left" Margin="440,46,0,0" VerticalAlignment="Top" Width="400" Height="60" FontWeight="Bold" FontSize="36"/>
         <Label Content="Имя пользователя:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,182,0,0" FontSize="20" Width="266" FontWeight="Bold"/>
-        <ComboBox x:Name="role_box" HorizontalAlignment="Left" Margin="698,226,0,0" VerticalAlignment="Top" Width="266" Height="34"/>
+        <ComboBox x:Name="role_box" HorizontalAlignment="Left" Margin="698,226,0,0" VerticalAlignment="Top" Width="266" Height="34" FontSize="16"/>
         <Label Content="Роль:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="698,182,0,0" FontSize="20" Width="266" FontWeight="Bold"/>
         <Button x:Name="Role_button" Content="Назначить роль" HorizontalAlignment="Left" Margin="496,348,0,0" VerticalAlignment="Top" Width="272" Height="38" FontSize="20" Click="Button_Click"/>
-        <ComboBox x:Name="Name_box" HorizontalAlignment="Left" Margin="292,226,0,0" VerticalAlignment="Top" Width="266" Height="34" IsEditable="True"/>
+        <ComboBox x:Name="Name_box" HorizontalAlignment="Left" Margin="292,226,0,0" VerticalAlignment="Top" Width="266" Height="34" IsEditable="True" FontSize="16"/>
         <Button x:Name="Delete_button" Content="Удалить пользователя" HorizontalAlignment="Left" Margin="496,408,0,0" VerticalAlignment="Top" Width="272" Height="38" FontSize="20" Click="Delete_button_Click"/>
 
     </Grid>

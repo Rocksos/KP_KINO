@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PROJECT_KINO.Windows"
         mc:Ignorable="d"
         Title="Add_filmmaker" Height="336" Width="800">
-    <Grid Background="#FF700897">
+    <Grid Background="#FF9A27C5">
         <ComboBox x:Name="maker_box" HorizontalAlignment="Left" Margin="302,64,0,0" VerticalAlignment="Top" Width="375" FontSize="18" IsEditable="True"/>
         <Label x:Name="Prof_label" Content="Имя актера" HorizontalAlignment="Left" Margin="102,60,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="195"/>
         <Button Content="Добавить" HorizontalAlignment="Left" Margin="305,135,0,0" VerticalAlignment="Top" Width="147" FontWeight="Bold" Height="33" Click="Button_Click" FontSize="18"/>

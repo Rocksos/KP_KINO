@@ -197,7 +197,6 @@ namespace PROJECT_KINO.Pages
                     NavigationService?.Navigate(new Film_page());
                 }
             };
-           
         }
 
         //кнопка поиска по названию

@@ -28,11 +28,11 @@ namespace PROJECT_KINO.Windows
         {
             InitializeComponent();
 
+            //заполнение бокса стран
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString))
             {
                 conn.Open();
 
-                //заполнение бокса стран
                 using (SqlCommand sqlCommand = conn.CreateCommand())
                 {
                     sqlCommand.CommandText = string.Format("SELECT Country_name FROM[Countries]");

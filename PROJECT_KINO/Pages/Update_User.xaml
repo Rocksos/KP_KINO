@@ -18,7 +18,7 @@
         <TextBox x:Name="Name_box" HorizontalAlignment="Left" Height="42" Margin="479,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="440" FontSize="24"/>
         <TextBox x:Name="Surname_box" HorizontalAlignment="Left" Height="42" Margin="479,296,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="440" FontSize="24"/>
         <ComboBox x:Name="Sex_box" HorizontalAlignment="Left" Margin="479,348,0,0" VerticalAlignment="Top" Width="120" FontSize="24"/>
-        <ComboBox x:Name="Country_box" HorizontalAlignment="Left" Margin="479,396,0,0" VerticalAlignment="Top" Width="440" Height="42" IsEditable="True"/>
+        <ComboBox x:Name="Country_box" HorizontalAlignment="Left" Margin="479,396,0,0" VerticalAlignment="Top" Width="440" Height="42" IsEditable="True" FontSize="16"/>
         <TextBox x:Name="Password_box" HorizontalAlignment="Left" Height="42" Margin="479,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="440" FontSize="24"/>
         <Button x:Name="Update_btn" Content="Изменить" HorizontalAlignment="Left" Margin="540,522,0,0" VerticalAlignment="Top" Width="200" FontSize="24" Height="40" Click="Update_btn_Click"/>
         <Label x:Name="Nick_lbl" Content="" HorizontalAlignment="Left" Margin="369,119,0,0" VerticalAlignment="Top" FontSize="30" Width="550"/>

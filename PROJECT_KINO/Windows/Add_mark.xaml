@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PROJECT_KINO.Windows"
         mc:Ignorable="d"
         Title="Add_mark" Height="336" Width="800">
-    <Grid Background="#FF700897">
+    <Grid Background="#FF9A27C5">
         <Button x:Name="mark_10" Content="10" HorizontalAlignment="Left" Margin="644,107,0,0" VerticalAlignment="Top" Width="50" FontWeight="Bold" FontSize="22" Height="40" Click="mark_10_Click" Background="White"/>
         <Button x:Name="mark_9" Content="9" HorizontalAlignment="Left" Margin="584,107,0,0" VerticalAlignment="Top" Width="50" FontWeight="Bold" FontSize="22" Height="40" Click="mark_9_Click" Background="White"/>
         <Button x:Name="mark_8" Content="8" HorizontalAlignment="Left" Margin="524,107,0,0" VerticalAlignment="Top" Width="50" FontWeight="Bold" FontSize="22" Height="40" Click="mark_8_Click" Background="White"/>

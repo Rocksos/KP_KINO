@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PROJECT_KINO.Windows"
         mc:Ignorable="d"
         Title="Add_Country" Height="336" Width="800">
-    <Grid Background="#FF700897">
+    <Grid Background="#FF9A27C5">
         <ComboBox x:Name="country_box" HorizontalAlignment="Left" Margin="305,60,0,0" VerticalAlignment="Top" Width="345" Height="34" IsEditable="True"/>
         <Label Content="Название страны" HorizontalAlignment="Left" Margin="141,60,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="162"/>
         <Button Content="Добавить" HorizontalAlignment="Left" Margin="305,135,0,0" VerticalAlignment="Top" Width="147" FontWeight="Bold" Height="33" Click="Button_Click" FontSize="18"/>

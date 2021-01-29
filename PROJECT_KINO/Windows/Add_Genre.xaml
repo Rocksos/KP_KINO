@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PROJECT_KINO.Windows"
         mc:Ignorable="d"
         Title="Add_Genre" Height="336" Width="800">
-    <Grid Background="#FF700897">
+    <Grid Background="#FF9A27C5">
         <ComboBox x:Name="genre_box" HorizontalAlignment="Left" Margin="305,64,0,0" VerticalAlignment="Top" Width="327" FontSize="18"/>
         <Label Content="Название жанра" HorizontalAlignment="Left" Margin="144,60,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <Button Content="Добавить" HorizontalAlignment="Left" Margin="305,135,0,0" VerticalAlignment="Top" Width="147" FontWeight="Bold" Height="33" Click="Button_Click" FontSize="18"/>
